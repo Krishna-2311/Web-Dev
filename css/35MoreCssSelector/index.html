@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .box:first-child {
+            color: red;
+        }
+
+        .box::first-line {
+            color:yellow;
+        } */
+         /* .boxes *{
+            color: blue;
+            border: 2px solid black;
+         }
+          p,a,.box,[data-color="primary"]{
+
+            margin-top: 45px;
+         }*/
+         /* .box:nth-child(even){
+            color:blueviolet;
+         /* } 
+          /*.box:nth-last-child(1){
+            color: chocolate;
+          } */
+           /* .box::before{
+            content: my code is good;
+            color: blue;
+           }
+           .box::after{
+            content: my code is very good;
+            color: red;
+           }
+            */
+            ::selection{
+                background-color: black;
+                color: aqua;
+            }
+            .box::first-letter{
+                color: lightseagreen;
+                font-size:35px;
+            }
+            input::placeholder{
+                color:rgb(122, 122, 145) ;
+                
+            }
+    </style> 
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary"class="box">
+            <div class="box"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolore harum, blanditiis
+                deserunt quidem quas libero natus, maiores consequatur facere debitis veritatis veniam distinctio nihil
+                velit unde, voluptas itaque. Assumenda laborum sit non, temporibus provident illo velit numquam aperiam,
+                sequi molestiae eos asperiores ipsam. Consequatur, assumenda sed iste adipisci ea repellendus dolorum
+                quasi accusantium, at recusandae officia. Eligendi at magnam sapiente blanditiis quas, in perferendis
+                laborum saepe nesciunt odit itaque excepturi dolore quibusdam, praesentium neque corporis esse autem.
+            </div>
+            <div class="box"> I am another box</div>
+            <div class="box"> I am box</div>
+            <input type="text" placeholder="Type your name here">
+        </div>
+    </div>
+</body>
+
+</html>

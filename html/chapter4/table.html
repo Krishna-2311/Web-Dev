@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html- table</title>
+    <style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    thead {
+        background-color: #7c4dff;
+        color: white;
+    }
+
+    thead th {
+        padding: 12px 15px;
+        text-align: left;
+    }
+
+    tbody tr {
+        border-bottom: 1px solid #ddd;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    tbody tr:hover {
+        background-color: #ffe6e6;
+        transition: background-color 0.3s ease;
+    }
+
+    td {
+        padding: 12px 15px;
+        border:2px solid black;
+    }
+
+    @media (max-width: 600px) {
+        table, thead, tbody, th, td, tr {
+            display: block;
+            width: 100%;
+        }
+        thead {
+            display: none;
+        }
+        tr {
+            margin-bottom: 15px;
+            background: white;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+        }
+        td {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        td:last-child {
+            border-bottom: none;
+        }
+    }
+</style>
+
+</head>
+<body>
+    <h1> table in html</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>role</th>
+                <th>salary</th>
+
+
+                
+
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>rohan</td>
+                <td>software engineer</td>
+                <td>$90</td>
+
+            </tr>
+                <td> mohan</td>
+                <td> sotware helper</td>
+                <td> $50</td>
+                
+            </tr>
+            <tr>
+                <td> sohan</td>
+                <td> engineer</td>
+                <td> $120</td>
+            </tr>
+             <tr>
+                <td > thank </td>
+                <td colspan="2"> you</td>
+                
+            </tr>
+
+
+        </tbody>
+
+    </table>
+    
+</body>
+</html>

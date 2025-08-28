@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS display properties</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 2px solid blue;
+            display: inline-block;
+            /* use block also to correct the below comment para.*/
+            padding: 4px;
+            margin: 3px;
+            width: 152px;
+            display: inline-flex;
+            /* inline element mein top se padding nahi lagti. */
+        }
+
+        .box1 {
+            /* display: none; */
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">
+        I am a box
+    </div>
+    <div class="box">
+        I am another box
+    </div>
+    <span>
+        i am a boy
+    </span>
+    <span>
+        good boy
+    </span>
+</body>
+
+</html>

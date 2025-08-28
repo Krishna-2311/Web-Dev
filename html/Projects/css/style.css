@@ -1,0 +1,182 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* BODY */
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent; /* Zomato red */
+    padding: 10px 40px; /* Slightly reduced padding to match smaller logo */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo img {
+    color:#E23744;
+    height: 35px;  /* Reduced from 50px to 35px */
+    width: auto;   /* Keep aspect ratio */
+    display: block;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header ul li a {
+    color: #E23744;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #ff7a84;
+}
+
+
+
+/* HERO SECTION WITH VIDEO BACKGROUND */
+.hero {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden; /* Prevent video overflow */
+}
+
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    object-fit: cover; /* Video fills container */
+    z-index: -1; /* Send video behind content */
+    filter: brightness(1.2); /* Darken for text visibility */
+}
+
+.hero img {
+    width: 200px;
+    animation: fadeIn 2s ease-in-out;
+    z-index: 1;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: white;
+    margin: 20px 0;
+    animation: slideUp 1.5s ease-in-out;
+    z-index: 1;
+}
+
+.hero input {
+    width: 350px;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.hero input:focus {
+    box-shadow: 0px 0px 8px rgba(203, 32, 45, 0.8);
+}
+
+
+/* POPULAR LOCATIONS */
+.popular-locations {
+    padding: 50px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.popular-locations h2 {
+    color: #cb202d;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.popular-locations p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.location-card {
+    background-color:white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(203, 32, 45, 0.3);
+    background-color: #ffe6e6;
+}
+
+/* FOOTER */
+footer {
+    background-color: #cb202d;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main section:first-child input {
+        width: 90%;
+    }
+}
