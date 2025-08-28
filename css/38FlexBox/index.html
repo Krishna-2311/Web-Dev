@@ -5,28 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    .container{
+    <style>
+        .container {
+            border: 2px solid red;
+            display: flex;
+            height: 80vh;
+            /* justify-content: center; */
+            align-items: center;
+            /* flex-direction: column; */
+            /* flex-wrap: wrap; */
+            /* align-content: flex-start; */
+            flex-flow: row wrap;
+            gap: 30x;
+            row-gap: 40px;
+            column-gap: 11px;
+            /* gap: 40px 11px; */
 
-    }
-    .item{
-        
-    }
-    
+        }
+
+        .item {
+            /* flex-grow: 1; */
+            height: 62px;
+            width: 62px;
+            border: 2px solid black;
+            background-color: blueviolet;
+            color: white;
+        }
+        .item1{
+            /* flex-grow: 2; */
+            /* flex-shrink: 2; */
+            align-self: flex-end;
+        }
+
+        .order1 {
+            order: 1;
+        }
+
+        .order2 {
+            order: 2;
+        }
+
+        .order3 {
+            order: 3;
+        }
+    </style>
+
+
 </head>
 
 <body>
     <main>
         <div class="container">
+            <div class="item item1"> 1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item order1">4</div>
+            <div class="item order3">5</div>
+            <div class="item order3">60</div>
             <div class="item"></div>
             <div class="item"></div>
+            <div class="item order2">63</div>
+            <div class="item order2">64</div>
             <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
+            <div class="item">last</div>
         </div>
     </main>
 
